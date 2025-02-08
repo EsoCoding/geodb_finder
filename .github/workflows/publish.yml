@@ -17,8 +17,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install build twine pytest pytest-asyncio aiosqlite
         pip install -e .
+        pip install build twine pytest pytest-asyncio
     
     - name: Run tests
       run: |
