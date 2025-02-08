@@ -119,8 +119,6 @@ class GeoDBFinder:
         Returns:
             Optional[Dict[str, str]]: Dictionary containing location data or None if not found.
         """
-        return asyncio.run(self.search_location_async(city_name, country))
-
     async def list_countries_async(self) -> List[Dict[str, str]]:
         """
         Asynchronously fetches a list of distinct country names from the database.
