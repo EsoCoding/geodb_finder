@@ -70,7 +70,7 @@ class GeoDBFinder:
         Returns:
             Optional[Dict[str, str]]: Dictionary containing location data or None if not found.
         """
-        return asyncio.run(self.search_location_async(city_name, country))
+        return asyncio.run(self.search_location_async(self, city_name, country))
 
     async def search_by_coordinates_async(self, latitude: str, longitude: str) -> Optional[Dict[str, Any]]:
         """
