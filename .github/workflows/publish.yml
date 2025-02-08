@@ -1,4 +1,4 @@
-name: geodb-finder
+name: geodb_finder
 
 on:
   release:
