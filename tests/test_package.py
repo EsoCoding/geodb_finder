@@ -1,5 +1,5 @@
 import pytest
-from geodb_finder import search_location, search_location_async, list_countries, list_countries_async
+from geodb_finder import search_location, search_location_async, list_countries, list_countries_async, search_by_coordinates, search_by_coordinates_async
 
 def test_sync_search():
     # Test synchronous search
@@ -19,6 +19,17 @@ def test_sync_search():
     assert result["city"] == "London"
     assert result["country"] == "United Kingdom"
 
+def test_search_by_coordinates():
+    # Test synchronous search by coordinates
+    result = search_by_coordinates("52n22", "4e54")  # Amsterdam coordinates
+    print("Sync search by coordinates result:", result)
+    assert result is not None
+    assert result["city"] == "Amsterdam"
+    assert result["country"] == "Netherlands"
+    assert "longitude" in result
+    assert "latitude" in result
+    assert "timezone" in result
+
 def test_list_countries():
     # Test synchronous list_countries
     countries = list_countries()
@@ -36,7 +47,16 @@ async def test_list_countries_async():
     assert len(countries) > 0
     assert "Netherlands" in countries  # Example check
 
-    # Test asynchronous search
+    # Test asynchronous search by coordinates
+    result = await search_by_coordinates_async("52n22", "4e54")  # Amsterdam coordinates
+    print("Async search by coordinates result:", result)
+    assert result is not None
+    assert result["city"] == "Amsterdam"
+    assert result["country"] == "Netherlands"
+    assert "longitude" in result
+    assert "latitude" in result
+    assert "timezone" in result
+
     result = await search_location_async("Amsterdam")
     print("Async search result:", result)
     assert result is not None

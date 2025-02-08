@@ -34,11 +34,11 @@ You can also retrieve location details using latitude and longitude.
 from geodb_finder import search_by_coordinates
 
 # Search by latitude and longitude
-result = search_by_coordinates("51.5074", "-0.1278")  # London coordinates
+result = search_by_coordinates("52n22", "6e27")  # Example coordinates
 print(result)  # Returns a dictionary with city, latitude, longitude, timezone, and country
 ```
 
-**Note:** An asynchronous version of this function is available as `search_by_coordinates_async(latitude: str, longitude: str)`.
+**Note:** An asynchronous version of this function is available as `search_by_coordinates_async(latitude: str, longitude: str)`, and it follows the same coordinate format.
 
 ### List Available Countries
 
