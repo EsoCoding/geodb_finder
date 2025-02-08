@@ -1,4 +1,4 @@
-name: Publish to PyPI
+name: geodb-finder
 
 on:
   release:
