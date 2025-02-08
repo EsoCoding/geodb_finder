@@ -22,7 +22,7 @@ jobs:
     
     - name: Run tests
       run: |
-        pytest
+        pytest -v --asyncio-mode=strict
     
     - name: Build package
       run: python -m build
