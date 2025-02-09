@@ -1,5 +1,0 @@
-0|city_name|TEXT|0||0
-1|longitude|TEXT|0||0
-2|latitude|TEXT|0||0
-3|timezone|TEXT|0||0
-4|country|TEXT|0||0

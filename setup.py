@@ -7,7 +7,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md'), 'r') as f:
 
 setup(
     name="geodb-finder",
-    version="0.1.0",
+    version="0.2.0",
     author="Gert-jan Poortman",
     author_email="info@esocoding.dev",
     description="A timezone and geolocation database finder.",
