@@ -10,7 +10,7 @@ setup(
     version="0.1.0",
     author="Gert-jan Poortman",
     author_email="info@esocoding.dev",
-    description="A Python package to find timezone and coordinates for cities worldwide",
+    description="A timezone and geolocation database finder.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://www.esocoding.dev",
