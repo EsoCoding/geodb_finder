@@ -9,9 +9,6 @@ import asyncio
 import aiosqlite
 from typing import Optional, Dict, List, Any
 
-# Configure logging
-logging.basicConfig(level=logging.DEBUG)
-
 
 class GeoDBFinder:
     """Handles database interactions for geolocation data."""
@@ -115,7 +112,7 @@ class GeoDBFinder:
         """
         params = (latitude, longitude, limit)
         results = await self._fetch_all(query, params)
-        logging.debug(f"Query results for {latitude}, {longitude}: {results}")
+        
         for result in results:
             result["city"] = result.pop("city_name")
         return results
