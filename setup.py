@@ -20,8 +20,14 @@ setup(
         'geodb_finder': ['data/*.db'],
     },
     install_requires=[
-        'aiosqlite>=0.17.0',
+        'aiosqlite>=0.21.0',
     ],
+    extras_require={
+        'dev': [
+            'pytest>=8.3.4',
+            'wheel>=0.45.1',
+        ],
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
